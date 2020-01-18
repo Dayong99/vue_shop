@@ -25,10 +25,11 @@
           <el-cascader
             v-model="selectedCateKeys"
             :options="cartList"
-            :props="{ expandTrigger: 'hover',
-            value: 'cat_id',
-            label: 'cat_name',
-            children: 'children' }"
+            :props="{
+              expandTrigger: 'hover',
+              value: 'cat_id',
+              label: 'cat_name',
+              children: 'children' }"
             @change="handleChange"></el-cascader>
         </el-col>
       </el-row>
