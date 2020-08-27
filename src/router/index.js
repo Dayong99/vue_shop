@@ -80,11 +80,11 @@ router.beforeEach((to, from, next) => {
   // to 将要访问的路径
   // form 代表从哪个路径跳转而来
   // next 是一个函数，表示放行
-  // next（）放行有两种方式，一种是next（）直接放行，一种是next（'/强制跳转到的路径'）
+  // next（）放行有两种方式，一种是next（）直接放行，一种是next（'./强制跳转到的路径'）
   if(to.path === '/login') return next()
   // 获取token
-  const tokenStr = window.sessionStorage.getItem('token')
-  if(!tokenStr) return next('./login')
+  // const tokenStr = window.sessionStorage.getItem('token')
+  // if(!tokenStr) return next('./login')
   next()
 })
 export default router
